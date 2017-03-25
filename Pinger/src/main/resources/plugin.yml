@@ -1,0 +1,8 @@
+name: Pinger
+version: ${project.version}
+main: de.alphahelix.pinger.Pinger
+prefix: [Pinger]
+load: STARTUP
+authors: [AlphaHelix]
+description: Small ping plugin
+website: https://github.com/AlphaHelixDev
