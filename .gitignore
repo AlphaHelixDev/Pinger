@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
 # Compiled class file
@@ -9,6 +10,10 @@
 # BlueJ files
 *.ctxt
 
+=======
+*.class
+
+>>>>>>> origin/master
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -16,6 +21,7 @@
 *.jar
 *.war
 *.ear
+<<<<<<< HEAD
 *.zip
 *.tar.gz
 *.rar
@@ -26,3 +32,8 @@ hs_err_pid*
 .idea/
 Spigot.iml
 src/test/
+=======
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> origin/master
