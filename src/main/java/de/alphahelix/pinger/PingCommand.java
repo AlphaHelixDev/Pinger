@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 import java.util.List;
 
 public class PingCommand extends SimpleCommand {
-    public PingCommand() {
+    PingCommand() {
         super("ping", "Check the ping", "pong");
     }
 

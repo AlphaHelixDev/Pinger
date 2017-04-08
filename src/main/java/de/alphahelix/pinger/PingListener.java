@@ -12,7 +12,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class PingListener extends SimpleListener {
 
     @EventHandler
-    public void onJoin(PlayerJoinEvent e) {
+    public void onJoin(final PlayerJoinEvent e) {
         if (!Pinger.getOptionsFile().getJoinmessage(0).isEmpty())
             e.getPlayer().sendMessage(Pinger.getOptionsFile().getJoinmessage(PingUtil.getPing(e.getPlayer())));
 
