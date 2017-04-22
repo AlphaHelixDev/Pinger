@@ -26,8 +26,8 @@ public class OptionsFile extends SimpleFile {
         setDefault("Messages.your current ping", "&7Your current ping is &a[ping]ms&7.");
         setDefault("Messages.your average ping", "&7Your average ping is &a[ping]ms&7.");
 
-        setDefault("Messages.others current ping", "&7Your current ping is &a[ping]ms&7.");
-        setDefault("Messages.others average ping", "&7Your average ping is &a[ping]ms&7.");
+        setDefault("Messages.others current ping", "&7[player] current ping is &a[ping]ms&7.");
+        setDefault("Messages.others average ping", "&7[player] average ping is &a[ping]ms&7.");
     }
 
     long getPingUpdate() {
@@ -50,12 +50,12 @@ public class OptionsFile extends SimpleFile {
         return getColorString("Messages.your average ping").replace("[ping]", Integer.toString(ping));
     }
 
-    String getOthersCurrentPing(int ping) {
-        return getColorString("Messages.others current ping").replace("[ping]", Integer.toString(ping));
+    String getOthersCurrentPing(String player, int ping) {
+        return getColorString("Messages.others current ping").replace("[player]", player).replace("[ping]", Integer.toString(ping));
     }
 
-    String getOthersAveragePing(int ping) {
-        return getColorString("Messages.others average ping").replace("[ping]", Integer.toString(ping));
+    String getOthersAveragePing(String player, int ping) {
+        return getColorString("Messages.others average ping").replace("[player]", player).replace("[ping]", Integer.toString(ping));
     }
 
     String getPingInTab() {

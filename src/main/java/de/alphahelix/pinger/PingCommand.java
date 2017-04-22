@@ -37,7 +37,7 @@ public class PingCommand extends SimpleCommand {
                     return true;
                 } else if (Bukkit.getPlayerExact(args[0]) != null) {
                     if (p.hasPermission("pinger.see.other")) {
-                        p.sendMessage(Pinger.getOptionsFile().getOthersCurrentPing(PingUtil.getPing(Bukkit.getPlayerExact(args[0]))));
+                        p.sendMessage(Pinger.getOptionsFile().getOthersCurrentPing(args[0], PingUtil.getPing(Bukkit.getPlayerExact(args[0]))));
                     } else {
                         p.sendMessage(Pinger.getOptionsFile().getNotAllowed());
                     }
@@ -50,7 +50,7 @@ public class PingCommand extends SimpleCommand {
                 if (args[0].equalsIgnoreCase("average")) {
                     if (Bukkit.getPlayerExact(args[1]) != null) {
                         if (p.hasPermission("pinger.see.other.average")) {
-                            p.sendMessage(Pinger.getOptionsFile().getOthersAveragePing(PingUtil.getAveragePing(Bukkit.getPlayerExact(args[1]))));
+                            p.sendMessage(Pinger.getOptionsFile().getOthersAveragePing(args[1], PingUtil.getAveragePing(Bukkit.getPlayerExact(args[1]))));
                         } else {
                             p.sendMessage(Pinger.getOptionsFile().getNotAllowed());
                         }
@@ -63,7 +63,7 @@ public class PingCommand extends SimpleCommand {
         } else {
             if (args.length == 1) {
                 if (Bukkit.getPlayerExact(args[0]) != null) {
-                    cs.sendMessage(Pinger.getOptionsFile().getOthersCurrentPing(PingUtil.getPing(Bukkit.getPlayerExact(args[0]))));
+                    cs.sendMessage(Pinger.getOptionsFile().getOthersCurrentPing(args[0], PingUtil.getPing(Bukkit.getPlayerExact(args[0]))));
                     return true;
                 } else {
                     cs.sendMessage(Pinger.getOptionsFile().getNotOnline(args[0]));
@@ -71,7 +71,7 @@ public class PingCommand extends SimpleCommand {
             } else if (args.length == 2) {
                 if (args[0].equalsIgnoreCase("average")) {
                     if (Bukkit.getPlayerExact(args[1]) != null) {
-                        cs.sendMessage(Pinger.getOptionsFile().getOthersAveragePing(PingUtil.getAveragePing(Bukkit.getPlayerExact(args[1]))));
+                        cs.sendMessage(Pinger.getOptionsFile().getOthersAveragePing(args[1], PingUtil.getAveragePing(Bukkit.getPlayerExact(args[1]))));
                     } else {
                         cs.sendMessage(Pinger.getOptionsFile().getNotOnline(args[1]));
                     }
