@@ -1,0 +1,12 @@
+name: Pinger
+version: "2.6"
+main: io.github.whoisalphahelix.pinger.Pinger
+api-version: "1.13"
+prefix: Pinger
+authors: [WhoIsAlphaHelix]
+description: Small ping plugin
+website: https://whoisalphahelix.github.io
+commands:
+  ping:
+    description: "Checks your/others ping (With average)"
+    usage: "/ping <average> <player>"

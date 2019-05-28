@@ -1,0 +1,19 @@
+# +-------------------------------------+
+# |  ____  ____  _  _  ___  ____  ____  |
+# | (  _ \(_  _)( \( )/ __)( ___)(  _ \ |
+# |  )___/ _)(_  )  (( (_-. )__)  )   / |
+# | (__)  (____)(_)\_)\___/(____)(_)\_) |
+# |                                     |
+# +-------------------------------------+
+Ping_in_tab:
+  enabled: true
+  layout: "{#player} &a{#ping}&8ms"
+  interval: 60
+Messages:
+  not_online: "&c{#player} &7is not online."
+  not_allowed: "&7You don't have permission ({#permission}) to execute this command!"
+  current_ping: "&7Your current ping is &a{#ping}ms&7."
+  average_ping: "&7Your average ping is &a{#ping}ms&7."
+  other_current_ping: "&7{#player} current ping is &a{#ping}ms&7."
+  other_average_ping: "&7{#player} average ping is &a{#ping}ms&7."
+  join: "&7Your current ping is &a{#ping}ms&7."
